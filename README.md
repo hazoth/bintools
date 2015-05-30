@@ -2,7 +2,9 @@
 tools to help process binary data
 
 ## bintools.simplebsd
+
 example:
+
     from bintools import simplebsd
     po = simplebsd.parse_a('00A4040006010203040501')
     with po.struct('APDU'):
@@ -14,9 +16,14 @@ example:
     print po.visit().format()
 output:
 > Struct:APDU         : 
+>
 >   Bytes:CLA           : 00
+>
 >   Bytes:INS           : A4
+>
 >   Bytes:P1P2          : 0400
+>
 >   UInt:Lc             : 06 (6)
+>
 >   Bytes:CDATA         : 010203040501
-    
+>   
